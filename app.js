@@ -51,15 +51,20 @@ function sayHello() {
 }
 sayHello();
 
-let sayWorld = 'World';
-console.log(sayWorld);
+let sayWorld = function() { 
+  console.log('World');
+};
+
+sayWorld();
 
 // Q7 メソッド
 user.birthday = '2000-09-27';
-user.sayhello = 'hello';
+user.sayHello = function() {
+  console.log("Hello!");
+};
 
 console.log(user.birthday);
-console.log(user.sayhello);
+user.sayHello();
 
 // Q8 引数
 let calc = {
