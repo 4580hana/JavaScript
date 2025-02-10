@@ -1,3 +1,4 @@
+// 基礎問題
 // Q1 変数
 let nickname = 'ごっしー';
 let age = 28;
@@ -89,9 +90,57 @@ let Answer = 5 + " を " + 3 + " で割った余りは " + result + " です。"
 console.log(Answer);
 
 // Q10 スコープ
-function foo() {
-  let x = 1;
-}
-console.log(x);
+// function foo() {
+//   let x = 1;
+// }
+// console.log(x);
 
 // スコープが関数の中のみ有効となっているため関数の外からはXを参照することができない
+
+
+//応用問題
+// Q1 標準組み込みオブジェクト
+let nunmer =  Math.floor(Math.random() * 10); 
+console.log(nunmer);
+
+// Q2 コールバック関数
+var alertmsg = function(){
+  alert("Hello World!");
+}
+setTimeout(alertmsg, 3000);
+
+// Q3 if
+let num = 5;
+if (num >= 0) {
+  console.log('num is greater than 0');
+} else if (num <= 0) {
+  console.log('num is less than 0');
+} else if (num === 0) {
+  console.log('num is 0');
+}
+
+// Q4 for
+let numbers = [];
+for (let i = 0; i < 100; i++) {
+  numbers.push(i);
+}
+console.log(numbers);
+
+// Q5 for × if
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+
+for (let i = 0; i < mixed.length; i++) {
+  let item = mixed[i];
+
+  if (typeof item === 'number') {
+
+    if (item % 2 === 0) {
+      console.log('even'); 
+    } else {
+      console.log('odd'); 
+    }
+  } else {
+
+    console.log('not number');
+  }
+}
